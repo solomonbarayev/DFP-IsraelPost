@@ -1,6 +1,6 @@
 import { Box, Paper, Typography, Stack, Chip } from '@mui/material';
 import { useMemo } from 'react';
-import type { Stats } from '../../types/stats';
+import type { Stats } from '../../../types/stats';
 
 interface DashboardRecentActivityProps {
     stats: Stats;

@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import { Paper, Typography } from '@mui/material';
-import type { Stats } from '../../types/stats';
+import type { Stats } from '../../../types/stats';
 
 interface DashboardColumnChartProps {
     stats: Stats;

@@ -4,13 +4,13 @@ import { Box, Stack, Paper, Typography, Grid, CircularProgress } from "@mui/mate
 // import { useLazyGetAccountPlatformStatsQuery } from "../redux/api/account-platform.api";
 // import PageHeading from "../components/PageHeading";
 
-import DashboardStatisticsCards from "../components/Dashboard/DashboardStatisticsCards";
-import FormSubmissionsPieChart from "../components/Dashboard/FormSubmissionsPieChart";
-import DashboardRecentActivity from "../components/Dashboard/DashboardRecentActivity";
-import DashboardColumnChart from "../components/Dashboard/DashboardColumnChart";
-import StatsRefreshButton from "../components/Dashboard/StatsRefreshButton";
-import DownloadReport from "../components/Dashboard/DownloadReport";
-import PageHeading from "../components/Backoffice/PageHeading";
+import DashboardStatisticsCards from "../components/back-office/dashboard/DashboardStatisticsCards";
+import FormSubmissionsPieChart from "../components/back-office/dashboard/FormSubmissionsPieChart";
+import DashboardRecentActivity from "../components/back-office/dashboard/DashboardRecentActivity";
+import DashboardColumnChart from "../components/back-office/dashboard/DashboardColumnChart";
+import StatsRefreshButton from "../components/back-office/dashboard/StatsRefreshButton";
+import DownloadReport from "../components/back-office/dashboard/DownloadReport";
+import PageHeading from "../components/back-office/layout/PageHeading";
 import type { Stats } from "../types/stats";
 
 

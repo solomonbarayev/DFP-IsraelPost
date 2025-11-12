@@ -5,7 +5,6 @@ interface PageHeadingProps {
 }
 
 const PageHeading = ({ headingText }: PageHeadingProps) => {
-
   return (
     <Box sx={{ mb: 5, flexGrow: 1 }}>
       <Typography

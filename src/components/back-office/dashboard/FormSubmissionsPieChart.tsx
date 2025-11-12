@@ -1,6 +1,6 @@
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-import type { Stats } from '../../types/stats';
+import type { Stats } from '../../../types/stats';
 
 interface FormSubmissionsPieChartProps {
     stats: Stats;

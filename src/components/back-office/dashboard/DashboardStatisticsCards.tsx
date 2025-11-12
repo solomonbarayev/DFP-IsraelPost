@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material';
-import type { Stats } from '../../types/stats';
+import type { Stats } from '../../../types/stats';
 import StatisticsCard from './StatisticsCard';
 
 interface DashboardStatisticsCardsProps {
