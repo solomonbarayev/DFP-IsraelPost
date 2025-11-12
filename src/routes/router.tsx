@@ -6,6 +6,8 @@ import FormPage from "../pages/FormPage";
 import NotFound from "../pages/NotFound";
 import Dashboard from "../pages/DashboardPage";
 import LoginLayout from "../layouts/LoginLayout";
+import FormsLayout from "../layouts/FormsLayout";
+
 import LoginPage from "../pages/LoginPage";
 import ProtectedRoutes from "./ProtectedRoutes";
 import MainLayout from "../layouts/MainLayout";
@@ -39,8 +41,14 @@ export const router = createBrowserRouter([
     ],
   },
   {
-    path: "/forms/:formId",
-    element: <FormPage />,
+    path: "/forms",
+    element: <FormsLayout />,
+    children: [
+      {
+        path: ":formId",
+        element: <FormPage />,
+      },
+    ],
   },
   {
     path: "*",
