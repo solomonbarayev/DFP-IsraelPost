@@ -2,7 +2,7 @@ import { Paper, Typography } from '@mui/material';
 
 interface StatisticsCardProps {
     title: string;
-    value: string;
+    value: string | number;
     color?: string;
     type?: string;
 }

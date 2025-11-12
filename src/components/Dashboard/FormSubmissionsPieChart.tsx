@@ -7,7 +7,7 @@ interface FormSubmissionsPieChartProps {
 }
 
 const FormSubmissionsPieChart = ({ stats }: FormSubmissionsPieChartProps) => {
-    if (!stats?.accountFormSubmissions || !stats?.accountForms) {
+    if (!stats?.formSubmissions || !stats?.forms) {
         return null;
     }
 
@@ -17,14 +17,14 @@ const FormSubmissionsPieChart = ({ stats }: FormSubmissionsPieChartProps) => {
     const currentYear = now.getUTCFullYear();
 
     // Filter submissions for current month
-    const monthlySubmissions = stats.accountFormSubmissions.filter(submission => {
+    const monthlySubmissions = stats.formSubmissions.filter(submission => {
         const subDate = new Date(submission.submittedAt);
         return subDate.getUTCMonth() === currentMonth &&
             subDate.getUTCFullYear() === currentYear;
     });
 
     // Create a map of form titles by ID
-    const formTitles = stats.accountForms.reduce((acc, form) => {
+    const formTitles = stats.forms.reduce((acc, form) => {
         acc[form.formId] = form.formTitle;
         return acc;
     }, {});

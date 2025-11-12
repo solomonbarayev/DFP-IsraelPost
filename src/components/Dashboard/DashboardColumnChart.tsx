@@ -25,14 +25,14 @@ const DashboardColumnChart = ({ stats }: DashboardColumnChartProps) => {
         const days = Array.from({ length: daysInMonth }, (_, i) => i + 1);
 
         // Create a map of form titles by ID
-        // const formTitles = stats.accountForms.reduce((acc, form) => {
+        // const formTitles = stats.forms.reduce((acc, form) => {
         //     acc[form.formId] = form.formTitle;
         //     return acc;
         // }, {});
 
         // Group submissions by day and form
         const submissionsByDay = days.reduce((acc: Record<number, Record<string, number>>, day: number) => {
-            const daySubmissions = stats.accountFormSubmissions.filter(sub => {
+            const daySubmissions = stats.formSubmissions.filter(sub => {
                 const subDate = new Date(sub.submittedAt);
                 const subDay = subDate.getUTCDate();
                 const subMonth = subDate.getUTCMonth();
@@ -53,7 +53,7 @@ const DashboardColumnChart = ({ stats }: DashboardColumnChartProps) => {
         }, {});
 
         // Prepare series data
-        const series = stats.accountForms.map(form => {
+        const series = stats.forms.map(form => {
             const data = days.map(day => submissionsByDay[day]?.[form.formId] || 0);
             return {
                 name: form.formTitle,

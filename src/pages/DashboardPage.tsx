@@ -9,15 +9,15 @@ import FormSubmissionsPieChart from "../components/Dashboard/FormSubmissionsPieC
 import DashboardRecentActivity from "../components/Dashboard/DashboardRecentActivity";
 import DashboardColumnChart from "../components/Dashboard/DashboardColumnChart";
 import StatsRefreshButton from "../components/Dashboard/StatsRefreshButton";
-// import DownloadReport from "../components/Dashboard/DownloadReport";
+import DownloadReport from "../components/Dashboard/DownloadReport";
 import PageHeading from "../components/Backoffice/PageHeading";
 import type { Stats } from "../types/stats";
 
 
 const stats: Stats = { // TODO: replace with actual stats
-    accountForms: [],
-    accountFormSubmissions: [],
-    accountFeatures: [],
+    forms: [],
+    formSubmissions: [],
+    features: [],
   };
 
 const DashboardPage = () => {
@@ -86,13 +86,13 @@ const DashboardPage = () => {
             console.log("Refreshing stats");
           }}
           />
-          {/* <DownloadReport
+          <DownloadReport
             isDownloading={isDownloading}
             // onDownload={fetchAccountPlatformStats}
             onDownload={() => {
               console.log("Downloading report");
             }}
-          /> */}
+          />
         </Stack>
 
         <DashboardStatisticsCards 

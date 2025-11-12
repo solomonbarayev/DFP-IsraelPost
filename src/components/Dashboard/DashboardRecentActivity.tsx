@@ -8,17 +8,17 @@ interface DashboardRecentActivityProps {
 
 const DashboardRecentActivity = ({ stats }: DashboardRecentActivityProps) => {
     const recentSubmissions = useMemo(() => {
-        if (!stats?.accountFormSubmissions || !stats?.accountForms) return [];
+        if (!stats?.formSubmissions || !stats?.forms) return [];
 
         // Create a map of form titles by ID
-        const formTitles = stats.accountForms.reduce((acc, form) => {
+        const formTitles = stats.forms.reduce((acc, form) => {
             acc[form.formId] = form.formTitle;
             return acc;
         }, {});
 
         // Create a copy of the array and sort it
-        return [...stats.accountFormSubmissions]
-            .sort((a, b) => new Date(b.submittedAt) - new Date(a.submittedAt))
+        return [...stats.formSubmissions]
+            .sort((a, b) => new Date(b.submittedAt).getTime() - new Date(a.submittedAt).getTime())
             .slice(0, 4)
             .map(submission => ({
                 ...submission,
@@ -26,10 +26,10 @@ const DashboardRecentActivity = ({ stats }: DashboardRecentActivityProps) => {
             }));
     }, [stats]);
 
-    const getTimeAgo = (dateString) => {
+    const getTimeAgo = (dateString: string) => {
         const now = new Date();
         const submissionDate = new Date(dateString);
-        const diffInSeconds = Math.floor((now - submissionDate) / 1000);
+        const diffInSeconds = Math.floor((now.getTime() - submissionDate.getTime()) / 1000);
 
         if (diffInSeconds < 60) return 'לפני מספר שניות';
         if (diffInSeconds < 3600) return `לפני ${Math.floor(diffInSeconds / 60)} דקות`;
