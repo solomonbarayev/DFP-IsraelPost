@@ -1,0 +1,49 @@
+import { createBrowserRouter, 
+  // Navigate
+ } from "react-router-dom";
+import HomePage from "../pages/HomePage";
+import FormPage from "../pages/FormPage";
+import NotFound from "../pages/NotFound";
+import Dashboard from "../pages/DashboardPage";
+import LoginLayout from "../layouts/LoginLayout";
+import LoginPage from "../pages/LoginPage";
+import ProtectedRoutes from "./ProtectedRoutes";
+import MainLayout from "../layouts/MainLayout";
+
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+  {
+    element: <LoginLayout />,
+    children: [
+      {
+        path: "/login",
+        element: <LoginPage />,
+      },
+    ],
+  },
+  {
+    element: <ProtectedRoutes />,
+    children: [
+      {
+        element: <MainLayout />,
+        children: [
+          {
+            path: "/dashboard",
+            element: <Dashboard />,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/forms/:formId",
+    element: <FormPage />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
+]);
