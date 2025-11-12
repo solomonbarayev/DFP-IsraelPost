@@ -8,7 +8,7 @@ import { store } from './store/store'
 import { theme } from './theme/theme'
 import './index.css'
 import { router } from './routes/router'
-import RTL from './components/RTL'
+import RTL from './components/Shared/RTL'
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

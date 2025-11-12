@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import useNavbarLinksHook from "../hooks/useNavbarLinksHook";
+import useNavbarLinksHook from "../../hooks/useNavbarLinksHook";
 import { LogOut, Menu as MenuIcon } from "lucide-react";
 import { useLocation } from "react-router-dom";
-import { useAppSelector } from "../store/hooks";
+import { useAppSelector } from "../../store/hooks";
 import {
     AppBar,
     Toolbar,
@@ -19,7 +19,7 @@ import {
     Typography
 } from "@mui/material";
 import { useState } from "react";
-import logoUrl from "../assets/logo.png";
+import logoUrl from "../../assets/logo.png";
 
 
 interface DynamicLinksProps {

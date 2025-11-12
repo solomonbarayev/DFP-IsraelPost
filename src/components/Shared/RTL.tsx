@@ -5,7 +5,7 @@ import { prefixer } from 'stylis';
 import createCache from '@emotion/cache';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { theme } from '../theme/theme';
+import { theme } from '../../theme/theme';
 
 // Create rtl cache
 const cacheRtl = createCache({

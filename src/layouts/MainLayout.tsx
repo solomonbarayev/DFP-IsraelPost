@@ -1,6 +1,6 @@
 import { Box, Container, Paper, styled } from "@mui/material";
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Shared/Navbar";
 
 
 // Styled component for the gradient background
