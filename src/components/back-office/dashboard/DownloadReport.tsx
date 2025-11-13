@@ -1,7 +1,7 @@
 
 import { Button } from '@mui/material';
 import { Download } from '@mui/icons-material';
-import { downloadCSV } from '../../../utils/helper-functions/downloadCsv';
+import { downloadCSV } from '../../../utils/helper-functions/file-helpers/download-csv';
 // import { useAppSelector } from '../../store/hooks';
 
 interface DownloadReportProps {
