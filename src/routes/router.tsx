@@ -11,6 +11,7 @@ import FormsLayout from "../layouts/FormsLayout";
 import LoginPage from "../pages/LoginPage";
 import ProtectedRoutes from "./ProtectedRoutes";
 import MainLayout from "../layouts/MainLayout";
+import FormSuccessPage from "@/pages/FormSuccessPage";
 
 export const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ export const router = createBrowserRouter([
       {
         path: ":formId",
         element: <FormPage />,
+      },
+      {
+        path: ":formId/success",
+        element: <FormSuccessPage />,
       },
     ],
   },

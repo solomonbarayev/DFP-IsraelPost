@@ -22,7 +22,7 @@ const FormPage = () => {
         setError(null)
         
         // Dynamically import the form component
-        const formModule = await import(`../forms/${formId}`)
+        const formModule = await import(`../forms/${formId}/${formId}`);
         setFormComponent(() => formModule.default)
       } catch (err) {
          console.error(`Error loading form: ${error}`);
