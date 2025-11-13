@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite && npx tsc --watch",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
@@ -24,6 +24,7 @@
     "@reduxjs/toolkit": "^2.10.1",
     "@types/react": "^18.3.26",
     "@types/react-dom": "^18.3.7",
+    "dayjs": "^1.11.19",
     "highcharts": "^12.4.0",
     "highcharts-react-official": "^3.2.3",
     "lucide-react": "^0.553.0",
@@ -32,6 +33,7 @@
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.9.5",
     "stylis": "^4.3.6",
-    "stylis-plugin-rtl": "^2.1.1"
+    "stylis-plugin-rtl": "^2.1.1",
+    "trim-canvas": "^0.1.2"
   }
 }
